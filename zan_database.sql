@@ -28,3 +28,22 @@ CREATE TABLE Order_Details (
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
     FOREIGN KEY (ProductID) REFERENCES Digital_Products(ProductID)
 );
+
+INSERT INTO Customers (CustomerID, FullName, Email) VALUES
+(1, 'Ahmed ', 'ahmed@gmail.com'),
+(2, 'Sarah ', 'sarah@gmail.com');
+
+
+INSERT INTO Digital_Products (ProductID, ProductName, Price, DownloadLink) VALUES
+(101, 'ZAN Pro Desktop Setup', 49.99, 'https://zan-store.com/download/101'),
+(102, 'Streamer Starter Pack', 29.99, 'https://zan-store.com/download/102');
+
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Payment_Status) VALUES
+(1001, 1, '2026-07-30', 'Completed'),
+(1002, 2, '2026-07-30', 'Pending');
+
+
+INSERT INTO Order_Details (OrderID, ProductID, Quantity) VALUES
+(1001, 101, 1),
+(1002, 102, 2);
