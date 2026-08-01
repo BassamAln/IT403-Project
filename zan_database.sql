@@ -1,4 +1,4 @@
-
+-- Database schema for ZAN Store created for IT403 Project
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY,
     FullName VARCHAR(100) NOT NULL,
